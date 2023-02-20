@@ -70,26 +70,34 @@ let charCount = document.createElement("span");
 let wordCount = document.createElement("span");
 let sentenceCount = document.createElement("span");
 let wpm = document.createElement("span");
+let clearButton = document.querySelector("#clear");
 charCount.textContent = "0 CHARACTER(S)";
 wordCount.textContent = "0 WORD(S)";
 sentenceCount.textContent = "0 SENTENCE(S)";
 wpm.textContent = "0 WPM";
-const metricsArr = [charCount, wordCount, sentenceCount, wpm];
-metricsArr.forEach(function(element) {
+const elements = [charCount, wordCount, sentenceCount, wpm];
+elements.forEach(function(element) {
     element.setAttribute("class", "metric");
     metrics.appendChild(element);
 });
 
 container.appendChild(metrics);
+document.body.style.backgroundImage = "url('bg3.jpg')";
+document.body.style.backgroundSize = 'cover';
 
 let text = '';
 
 
 // Background images
-let bgImages = ['bgt.jpg'];
+let bgImages = ['bgf.jpg', 'bg3.jpg'];
 
 // Get input from textarea
 input.addEventListener('input', display);
+
+clearButton.addEventListener("click", function() {
+    input.value = '';
+    input.dispatchEvent(new Event('input'));
+});
 
 // Button to change background
 const bgButton = document.getElementById("btn");

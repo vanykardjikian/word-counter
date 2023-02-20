@@ -5,15 +5,18 @@ body {
     margin: 0;
 }
 
+
 .top-bar {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.85);
 }
+
 
 h1 {
     padding-left: 2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: .2rem .2rem 0 rgb(0,18,76);
 }
 
 #btn {
@@ -24,25 +27,34 @@ h1 {
     margin-left: auto;
     margin-top: auto;
     margin-bottom: auto;
-    width: 3rem;
-    height: auto
+    width: 40px;
+    
 }
 
 textarea {
+    font-family: monospace;
     border-radius: 25px;
-    border-style: hidden;
-
+    border-style: solid;
+    border-width: 0.5rem;
     resize: none;
-    font-size: x-large;
+    font-size: 1.4rem;
     width: 50rem;
     height: 29rem;
+    padding: 1rem;
     font-weight: bold;
-    padding: 2rem;
-    background-color: rgba(238, 238, 238, 0.8);
+    background-color: rgba(238, 238, 238, 0.85);
+    border-color: rgba(238, 238, 238, 0);
+    line-height: 2.2rem;
+}
+
+textarea:focus { 
+    outline: none !important;
+    border-color: rgba(238, 238, 238, 0);
+    box-shadow: 0 0 1rem .6rem rgba(0,18,76, 0.7);
 }
 
 .container {
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 7rem;
     margin-right: 7rem;
     display: flex;
@@ -53,7 +65,7 @@ textarea {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 33rem;
+    height: 30rem;
     /*align-items: center;*/
     /*justify-content: center;*/
   }
@@ -63,10 +75,24 @@ textarea {
     margin: auto;
     font-size: 1.5rem;
     padding: 1rem .5rem;
-    width: 15rem;
+    width: auto;
     text-align: center;
     color: white;
-    background: rgba(255, 10, 235, 0);
-    text-shadow: 0 0 .5rem black;
+    border-radius: 0.8rem;
     font-weight: 900;
+    text-shadow: .2rem .2rem 0 rgb(0,18,76);
+  }
+
+  #clear {
+    background-color: rgba(253,76,119, 0.4);
+    color: white;
+    height: 2.5rem;
+    width: 5rem;
+    margin-left: 55rem;
+    margin-top: 1rem;
+    font-weight: bolder;
+    border-radius: 0.8rem;
+    border-style: hidden;
+    font-size: 1rem;
+    box-shadow: .2rem .2rem 0 rgb(0,18,76);
   }
