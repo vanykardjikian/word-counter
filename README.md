@@ -1,13 +1,11 @@
 __<h2>Description:</h2>__
 
-***
 
 <p>A basic web application that provides a real-time character, word and sentence count as well as an estimated typing speed (WPM) for any user inputted text.</p>
 <br>
 
 __<h2>Features:</h2>__
 
-***
 
 + Character counter
 + Word counter
