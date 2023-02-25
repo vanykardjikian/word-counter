@@ -31,10 +31,10 @@ function getSentenceCount(text) {
     const re = /[.?!]$|[.?!]\s/
     console.log(text.split(re));
     return text.split(re).length - 1;
- }
+}
 
 
- function getTypingSpeed() {
+function getTypingSpeed() {
     if (text.length == 0) {
         initTime = getInitialTime();
         wpm.textContent = "0 WPM";
@@ -42,19 +42,18 @@ function getSentenceCount(text) {
     }
     let currentTime = new Date().getTime();
     let minutesPassed = ((currentTime - initTime) / 1000) / 60;
-    console.log(Math.floor(getWordCount(text) / minutesPassed));
     wpm.textContent = Math.floor(getWordCount(text) / minutesPassed) + " WPM";
- }
+}
 
 function getInitialTime() {
     return new Date().getTime();
 }
 
 function setBackground() {
-    let index = Math.floor(Math.random() * bgImages.length);
-    document.body.style.backgroundImage = `url(${bgImages[index]})`;
-    document.body.style.backgroundSize = 'cover'
-    // Need to make sure index isn't same as current bg
+    let currentBackground = document.body.style.backgroundImage;
+    document.body.style.backgroundImage = background;
+    background = currentBackground;
+    document.body.style.backgroundSize = 'cover';
 }
 
 // DOM elements
@@ -65,6 +64,7 @@ input.autofocus = true;
 const container = document.querySelector(".container");
 container.appendChild(input);
 
+// Metrics
 let metrics = document.querySelector(".metrics");
 let charCount = document.createElement("span");
 let wordCount = document.createElement("span");
@@ -80,20 +80,19 @@ elements.forEach(function(element) {
     element.setAttribute("class", "metric");
     metrics.appendChild(element);
 });
-
 container.appendChild(metrics);
-document.body.style.backgroundImage = "url('bg3.jpg')";
+
+// Set initial background
+document.body.style.backgroundImage = "url('bg1.jpg')";
 document.body.style.backgroundSize = 'cover';
+let background = "url('bg2.jpg')";
 
+
+// Textarea event listener
 let text = '';
-
-
-// Background images
-let bgImages = ['bgf.jpg', 'bg3.jpg'];
-
-// Get input from textarea
 input.addEventListener('input', display);
 
+// Clear button
 clearButton.addEventListener("click", function() {
     input.value = '';
     input.dispatchEvent(new Event('input'));
@@ -102,5 +101,7 @@ clearButton.addEventListener("click", function() {
 // Button to change background
 const bgButton = document.getElementById("btn");
 bgButton.addEventListener("click", setBackground);
+
+// Update typing speed every 500 ms
 let initTime = getInitialTime();
 setInterval(getTypingSpeed, 500);

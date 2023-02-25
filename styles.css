@@ -16,12 +16,11 @@ h1 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: .2rem .2rem 0 rgb(0,18,76);
+    text-shadow: .2rem .2rem 0 rgb(24, 32, 46)
 }
 
 #btn {
     display: block;
-    background-color: rgba(0, 0, 0, 0);
     color: white;
     margin-right: 2rem;
     margin-left: auto;
@@ -42,21 +41,20 @@ textarea {
     height: 29rem;
     padding: 1rem;
     font-weight: bold;
-    background-color: rgba(238, 238, 238, 0.85);
+    background-color: rgba(238, 238, 238, 0.8);
     border-color: rgba(238, 238, 238, 0);
     line-height: 2.2rem;
 }
 
 textarea:focus { 
     outline: none !important;
-    border-color: rgba(238, 238, 238, 0);
-    box-shadow: 0 0 1rem .6rem rgba(0,18,76, 0.7);
+    box-shadow: 0 0 1rem .6rem rgba(30, 69, 107, 0.6);
 }
 
 .container {
     margin-top: 3rem;
-    margin-left: 7rem;
-    margin-right: 7rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
     display: flex;
     justify-content: space-between;
 }
@@ -64,14 +62,12 @@ textarea:focus {
 .metrics {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    
     height: 30rem;
-    /*align-items: center;*/
-    /*justify-content: center;*/
-  }
+}
 
 
-  .metric {
+.metric {
     margin: auto;
     font-size: 1.5rem;
     padding: 1rem .5rem;
@@ -80,19 +76,21 @@ textarea:focus {
     color: white;
     border-radius: 0.8rem;
     font-weight: 900;
-    text-shadow: .2rem .2rem 0 rgb(0,18,76);
-  }
+    text-shadow: .2rem .2rem 0 rgb(24, 32, 46);
+}
 
-  #clear {
-    background-color: rgba(253,76,119, 0.4);
+
+#clear {
+    background-color: rgb(0,151,182);
     color: white;
     height: 2.5rem;
     width: 5rem;
-    margin-left: 55rem;
+    margin-left: 56rem;
     margin-top: 1rem;
     font-weight: bolder;
-    border-radius: 0.8rem;
+    border-radius: 0.6rem;
     border-style: hidden;
     font-size: 1rem;
-    box-shadow: .2rem .2rem 0 rgb(0,18,76);
-  }
+    box-shadow: .2rem .2rem 0 rgb(24, 32, 46);
+    cursor: pointer;
+}
