@@ -53,7 +53,6 @@ function setBackground() {
     let currentBackground = document.body.style.backgroundImage;
     document.body.style.backgroundImage = background;
     background = currentBackground;
-    document.body.style.backgroundSize = 'cover';
 }
 
 // DOM elements
@@ -80,11 +79,9 @@ elements.forEach(function(element) {
     element.setAttribute("class", "metric");
     metrics.appendChild(element);
 });
-container.appendChild(metrics);
 
 // Set initial background
 document.body.style.backgroundImage = "url('bg1.jpg')";
-document.body.style.backgroundSize = 'cover';
 let background = "url('bg2.jpg')";
 
 

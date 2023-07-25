@@ -3,13 +3,32 @@ body {
     background-color: rgb(28, 28, 28);
     color: white;
     margin: 0;
+    background-size: auto;
+    
+}
+
+* {
+    box-sizing: border-box;
 }
 
 
 .top-bar {
     display: flex;
+    margin-left: 0;
+    height: 7rem;
+    background-color: rgba(32, 32, 32, 0.4);
+    box-shadow: 0 0 0.5rem rgba(7, 7, 7, 1);
 }
 
+main {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 3rem;
+    width: 100%;
+}
 
 h1 {
     padding-left: 2rem;
@@ -26,19 +45,25 @@ h1 {
     margin-left: auto;
     margin-top: auto;
     margin-bottom: auto;
-    width: 40px;
+    width: 2.7rem;
     
+}
+
+.container {
+    display: flex;
+    width: 57vw;
+    flex-direction: column-reverse;
+    align-items: flex-end;
 }
 
 textarea {
     font-family: monospace;
-    border-radius: 25px;
+    border-radius: 2rem;
     border-style: solid;
-    border-width: 0.5rem;
     resize: none;
     font-size: 1.4rem;
-    width: 50rem;
-    height: 29rem;
+    width: 100%;
+    height: 70vh;
     padding: 1rem;
     font-weight: bold;
     background-color: rgba(238, 238, 238, 0.8);
@@ -51,24 +76,16 @@ textarea:focus {
     box-shadow: 0 0 1rem .6rem rgba(30, 69, 107, 0.6);
 }
 
-.container {
-    margin-top: 3rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    display: flex;
-    justify-content: space-between;
-}
 
 .metrics {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    
-    height: 30rem;
+    justify-content: space-around;
 }
 
 
 .metric {
-    margin: auto;
     font-size: 1.5rem;
     padding: 1rem .5rem;
     width: auto;
@@ -93,4 +110,34 @@ textarea:focus {
     font-size: 1rem;
     box-shadow: .2rem .2rem 0 rgb(24, 32, 46);
     cursor: pointer;
+}
+
+@media (max-width: 1025px) {
+    body {
+        background-size: auto;
+    }
+
+    html {
+        font-size: 77%;
+    }
+
+    .metrics {
+        flex-direction: row;
+    }
+
+    .container {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    
+    textarea {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+}
+
+@media (max-width: 1025px) {
+    textarea {
+        height: 56vh;
+    }
 }
