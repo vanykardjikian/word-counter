@@ -44,24 +44,25 @@ h1 {
 }
 
 #toggle-theme.dark .light-btn {
-    display: none;
+    display: flex;
 }
 
 #toggle-theme.dark .dark-btn {
-    display: flex;
+    display: none;
 }
 
 #toggle-theme .light-btn {
-    display: flex;
+    display: none;
 }
 
 #toggle-theme .dark-btn {
-    display: none;
+    display: flex;
 }
 
 #btn {
     color: white;
     font-size: 2rem;
+    cursor: pointer;
     transition: ease 0.2s;
 }
 
@@ -109,7 +110,6 @@ textarea:focus {
     color: black;
     font-size: 1.5rem;
     padding: 1rem .5rem;
-    width: auto;
     text-align: center;
     border-radius: 0.8rem;
     font-weight: 900;
@@ -121,9 +121,9 @@ textarea:focus {
 
 
 #clear {
-    background-color: rgba(255, 255, 255, 0);
-    color: var(--accent-color-light);
-    border: 0.15rem solid var(--accent-color-light);
+    background-color: rgba(164,225,15, 0.7);
+    color: black;
+    border: 0.05rem solid black;
     padding: 0.6rem 1rem;
     margin-top: 1rem;
     font-weight: 800;
