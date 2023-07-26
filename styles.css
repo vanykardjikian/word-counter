@@ -87,12 +87,12 @@ textarea::-webkit-scrollbar-track {
     margin-top: 2.3rem;
     margin-bottom: 2.3rem;
     background: rgb(199, 199, 199);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 textarea::-webkit-scrollbar-thumb {
     background: black;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 textarea::-webkit-scrollbar-thumb:hover {
@@ -105,7 +105,7 @@ textarea {
     font-family: monospace;
     border-radius: 2rem;
     box-shadow: 0 0 0 0.05rem black;
-    border: 0.15rem solid rgba(238, 238, 238, 0);
+    border: 0.2rem solid rgba(238, 238, 238, 0);
     resize: none;
     font-size: 1.4rem;
     width: 100%;
@@ -119,8 +119,8 @@ textarea {
 
 textarea:focus { 
     outline: none !important;
-    box-shadow: none;
-    border: 0.15rem solid var(--accent-color-light);
+    box-shadow: 0 0 0 0.15rem var(--accent-color-light);
+    border: 0.2rem solid rgba(238, 238, 238, 0);
 }
 
 
@@ -129,6 +129,7 @@ textarea:focus {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 .metric {
@@ -138,12 +139,12 @@ textarea:focus {
     text-align: center;
     border-radius: 0.8rem;
     font-weight: 900;
+    width: fit-content;
 }
 
 .dark .metric {
     color: white;
 }
-
 
 #clear {
     background-color: rgba(164,225,15, 0.7);
