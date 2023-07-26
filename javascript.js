@@ -53,6 +53,8 @@ function setBackground() {
     let currentBackground = document.body.style.backgroundImage;
     document.body.style.backgroundImage = background;
     background = currentBackground;
+    toggleTheme.classList.toggle("dark");
+    metrics.classList.toggle("dark")
 }
 
 // DOM elements
@@ -81,8 +83,8 @@ elements.forEach(function(element) {
 });
 
 // Set initial background
-document.body.style.backgroundImage = "url('bg1.jpg')";
-let background = "url('bg2.jpg')";
+document.body.style.backgroundImage = "url('https://www.toptal.com/designers/subtlepatterns/uploads/subtle_dots.png')";
+let background = "url('darkness.png')";
 
 
 // Textarea event listener
@@ -96,8 +98,8 @@ clearButton.addEventListener("click", function() {
 });
 
 // Button to change background
-const bgButton = document.getElementById("btn");
-bgButton.addEventListener("click", setBackground);
+const toggleTheme = document.getElementById("toggle-theme");
+toggleTheme.addEventListener("click", setBackground);
 
 // Update typing speed every 500 ms
 let initTime = getInitialTime();
