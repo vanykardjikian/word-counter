@@ -16,7 +16,6 @@ body {
     --accent-color-light: rgb(164,225,15);
 }
 
-
 .top-bar {
     display: flex;
     align-items: center;
@@ -76,12 +75,37 @@ h1 {
     width: 57vw;
     flex-direction: column-reverse;
     align-items: flex-end;
+    overflow: hidden;
+    border-radius: 2rem;
 }
 
+textarea::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+textarea::-webkit-scrollbar-track {
+    margin-top: 2.3rem;
+    margin-bottom: 2.3rem;
+    background: rgb(199, 199, 199);
+    border-radius: 1rem;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 1rem;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: rgb(63, 63, 63);
+}
+
+
 textarea {
+    cursor: auto;
     font-family: monospace;
     border-radius: 2rem;
-    border-style: solid;
+    box-shadow: 0 0 0 0.05rem black;
+    border: 0.15rem solid rgba(238, 238, 238, 0);
     resize: none;
     font-size: 1.4rem;
     width: 100%;
@@ -90,12 +114,13 @@ textarea {
     font-weight: bold;
     background-color: rgba(238, 238, 238, 0.6);
     line-height: 2.2rem;
+    overflow-y: auto;
 }
 
 textarea:focus { 
     outline: none !important;
-    border-style: hidden;
-    box-shadow: 0 0 0 0.15rem var(--accent-color-light);
+    box-shadow: none;
+    border: 0.15rem solid var(--accent-color-light);
 }
 
 
