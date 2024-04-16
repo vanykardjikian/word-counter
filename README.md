@@ -1,4 +1,4 @@
-Live preview: https://vee1807.github.io/word-counter/
+Live preview: https://vanykardjkian.github.io/word-counter/
 <br>
 
 __<h2>Description:</h2>__
